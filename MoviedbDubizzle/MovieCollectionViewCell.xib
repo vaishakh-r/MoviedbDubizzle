@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="MoviedbDubizzle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="554" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="554" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_default" translatesAutoresizingMaskIntoConstraints="NO" id="XYK-gW-d2G">
+                        <rect key="frame" x="18" y="18" width="93" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XYK-gW-d2G" secondAttribute="height" multiplier="115:104" id="9fj-vJ-a3G"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iEJ-nl-EGp">
+                        <rect key="frame" x="131" y="8" width="391" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-Cf-i36" userLabel="Year">
+                        <rect key="frame" x="131" y="39.5" width="37.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Q1e-eZ-xsr" userLabel="Genre">
+                        <rect key="frame" x="131" y="105.5" width="391" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iEJ-nl-EGp" secondAttribute="trailing" constant="32" id="8bG-xU-MHL"/>
+                <constraint firstItem="Q1e-eZ-xsr" firstAttribute="width" secondItem="iEJ-nl-EGp" secondAttribute="width" id="9Az-GM-oQY"/>
+                <constraint firstItem="ARr-Cf-i36" firstAttribute="top" secondItem="iEJ-nl-EGp" secondAttribute="bottom" constant="10" id="L5y-za-II7"/>
+                <constraint firstAttribute="bottom" secondItem="XYK-gW-d2G" secondAttribute="bottom" constant="18" id="YG6-3d-AjI"/>
+                <constraint firstItem="XYK-gW-d2G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="18" id="Yfe-F6-3SR"/>
+                <constraint firstItem="XYK-gW-d2G" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="avb-LW-HEE"/>
+                <constraint firstItem="Q1e-eZ-xsr" firstAttribute="leading" secondItem="iEJ-nl-EGp" secondAttribute="leading" id="cUy-fv-elL"/>
+                <constraint firstItem="iEJ-nl-EGp" firstAttribute="leading" secondItem="XYK-gW-d2G" secondAttribute="trailing" constant="20" id="e6S-j0-iPT"/>
+                <constraint firstItem="ARr-Cf-i36" firstAttribute="leading" secondItem="iEJ-nl-EGp" secondAttribute="leading" id="h0f-tr-g1i"/>
+                <constraint firstItem="Q1e-eZ-xsr" firstAttribute="baseline" secondItem="XYK-gW-d2G" secondAttribute="baseline" id="h3B-Xh-NaJ"/>
+                <constraint firstItem="iEJ-nl-EGp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="n9b-rY-1IF"/>
+            </constraints>
+            <connections>
+                <outlet property="genreLabel" destination="Q1e-eZ-xsr" id="BAJ-oK-T2H"/>
+                <outlet property="movieImageView" destination="XYK-gW-d2G" id="d3V-EA-ZOg"/>
+                <outlet property="movieTitleLabel" destination="iEJ-nl-EGp" id="78b-8Z-e76"/>
+                <outlet property="yearLabel" destination="ARr-Cf-i36" id="UCh-O3-zRO"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="movie_default" width="32" height="32"/>
+    </resources>
+</document>

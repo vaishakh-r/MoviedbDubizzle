@@ -1,0 +1,6 @@
+framework module Pods_MoviedbDubizzleTests {
+  umbrella header "Pods-MoviedbDubizzleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
